@@ -1,21 +1,3 @@
-require "sinatra"
-# require "sinatra/reloader"
-
-get "/" do
-    phrase = params["phrase"]
-    shift = params["shift"].to_i
-    encode = caesar_cipher(phrase, shift)
-    erb :index, :locals => { :encode => encode}
-    # erb :index
-end
-
-# get "/output" do
-#     phrase = params["phrase"]
-#     shift = params["shift"].to_i
-#     encode = caesar_cipher(phrase, shift)
-#     erb :output, :locals => { :encode => encode}
-# end
-
 def caesar_cipher (phrase, shift)
     return "" if phrase.nil?
     shift %= 26

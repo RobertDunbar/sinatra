@@ -2,7 +2,7 @@
     <head>
         <link href="style.css" rel="stylesheet" type="text/css">
     </head>
-    <body>
+    <body id="caesar">
     <h1>Ceasar Cipher Encoder</h1>
     <div id="container">
         <form>
@@ -10,9 +10,12 @@
             <input class="box" type="text" name="phrase" /><br/>
             <label for="shift">Enter number to shift</label>
             <input class="box" type="text" name="shift" /><br/>
-            <input id="button" type="submit" value="Encode!" />
+            <input class="button" type="submit" value="Encode!" />
+        </form>
+        <form method="get" action="/">
+            <input class="button" type="submit" value="Go Back" />
         </form>
     </div>
-    <p><%= encode != "" ? "Your ENCODED phrase is #{encode}" : "" %></p>
+    <p><br/><%= encode != "" ? "Your ENCODED phrase is #{encode}" : "" %></p>
     </body>
 </html>
