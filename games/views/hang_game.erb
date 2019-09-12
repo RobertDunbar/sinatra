@@ -1,0 +1,25 @@
+<body id="hangman">
+<h1 id="title-hangman">Horror Hangman</h1>
+<div id="images">
+    <% num_wrong = @status.incorrect.length %>
+    <img class="skeleton" src="<%= @status.images[num_wrong] %>" alt="Skeleton images">
+</div>
+<div id="hang-container">
+    <p class="status-info">Secret Word :</p>
+    <p class="status-info"><%= @status.correct.join(" ") %></p>
+    <form method="post" action="/hang_game">
+        <label for="phrase">Guess letter or word</label>
+        <input class="box" type="text" name="guess" /><br/>
+        <input class="button" type="submit" value="Enter" />
+    </form>
+    <br/><p class="hang-info">Number of guesses left : </p>
+    <p class="status-info"><%= @status.allowed - @status.guesses %></p>
+    <p class="hang-info">Incorrect letters : </p>
+    <p class="status-info"><%= @status.incorrect.join(", ") %></p>
+        <div class="back-button">
+        <br/><form method="get" action="/hangman">
+            <input class="button" type="submit" value="Go Back" />
+        </form>
+    </div>
+</div>
+</body>

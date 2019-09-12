@@ -1,0 +1,19 @@
+<html>
+    <head></head>
+    <body class="<%= params["guess"].to_i > num ? "high" : "low" %>">
+    <form>
+        <input type='text' name='guess' />
+        <input type='submit' value='Guess!' />
+    </form>
+    <style>
+      .high {
+        background: green
+      }
+      .low {
+        background: red
+      }
+    </style>
+    <p><%= message %></p>
+    <p><%= params["guess"].to_i == num ? "The SECRET number is #{num}" : "" %></p>
+    </body>
+</html>
