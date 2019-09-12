@@ -1,0 +1,19 @@
+<body id="hangman">
+<h1 id="title-hangman">Horror Hangman</h1>
+<div id="images">
+    <% num_wrong = @status.incorrect.length %>
+    <img class="skeleton" src="<%= @status.images[num_wrong] %>" alt="Skeleton images">
+</div>
+<div id="hang-container">
+    <p class="status-info">YOU LIVE!</p>
+    <p class="status-info">CORRECT!</p><br/>
+    <p class="status-info">Secret word :</p>
+    <p class="status-info"><%= @status.word %></p><br/>
+    <p class="status-info">Life awaits...</p>
+        <div>
+        <br/><form method="get" action="/hangman">
+            <input class="button" type="submit" value="Go Back" />
+        </form>
+    </div>
+</div>
+</body>
