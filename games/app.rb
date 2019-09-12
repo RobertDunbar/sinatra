@@ -1,5 +1,5 @@
 require "sinatra"
-require "sinatra/reloader"
+require "sinatra/reloader" if development?
 require "./lib/cipher.rb"
 require "./lib/hangman.rb"
 
