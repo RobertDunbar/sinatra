@@ -1,17 +1,13 @@
-<html>
-    <head>
-        <link href="style.css" rel="stylesheet" type="text/css">
-    </head>
-    <body>
-    <h1>Horror Hangman</h1>
-    <div id="container">
-        <form>
-            <label for="phrase">Enter phrase to encode</label>
-            <input class="box" type="text" name="phrase" /><br/>
-            <label for="shift">Enter number to shift</label>
-            <input class="box" type="text" name="shift" /><br/>
-            <input id="button" type="submit" value="Encode!" />
-        </form>
-    </div>
-    </body>
-</html>
+<body id="hangman">
+<h1 id="title-hangman">Horror Hangman</h1>
+<div id="start-button">
+    <form method="get" action="/hang_game">
+        <input id="play" class="button" type="submit" value="Start Horror..." />
+    </form>
+</div>
+<div class="back-button">
+    <form method="get" action="/">
+        <input class="button" type="submit" value="Go Back" />
+    </form>
+</div>
+</body>
